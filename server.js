@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // algunos datos referentes a la API
 const readData = () => {
     try {
-        const data = fs.readFileSync('data/data.json');
+        const data = fs.readFileSync('data.json');
         return JSON.parse(data);
     }catch(error) {
         console.log(error);
