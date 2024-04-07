@@ -23,7 +23,7 @@ const readData = () => {
 // Funcion encargada de escribir dentro del archivo DATA.JSON
 const writeData = (data) => {
     try {
-        fs.writeFileSync('data/data.json', JSON.stringify(data));
+        fs.writeFileSync('data.json', JSON.stringify(data));
     }catch(error) {
         console.log(error);
     }
