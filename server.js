@@ -58,10 +58,10 @@ app.get('/tacos/:id', (req, res) => {
 
 app.post('/tacos', (req, res) => {
     const data = readData();
-    const queryParams = req.query;
+    const body = req.body;
     const newOrder = {
         id: data.tacos.length + 1,
-        ...queryParams,
+        ...body,
     };
     data.tacos.push(newOrder);
     writeData(data);
