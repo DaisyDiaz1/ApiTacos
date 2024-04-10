@@ -92,17 +92,18 @@ app.delete('/tacos/:id', (req, res) => {
     res.json({ message: "Order deleted successfully" });
 });
 
-app.post('/suma', (req, res) => {
-    const { num1, num2 } = req.body;
-    const sum = num1 + num2;
+app.get('/suma/:num1/:num2', (req, res) => {
+    const { num1, num2 } = req.params;
+    const sum = parseInt(num1) + parseInt(num2);
     res.json({ result: sum });
 });
 
-app.post('/mult', (req, res) => {
-    const { num1, num2 } = req.body;
-    const product = num1 * num2;
+app.get('/mult/:num1/:num2', (req, res) => {
+    const { num1, num2 } = req.params;
+    const product = parseInt(num1) * parseInt(num2);
     res.json({ result: product });
 });
+
 
 
 app.listen(port, () => {
