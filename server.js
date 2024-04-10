@@ -94,13 +94,13 @@ app.delete('/tacos/:id', (req, res) => {
 
 app.get('/suma/:num1/:num2', (req, res) => {
     const { num1, num2 } = req.params;
-    const sum = parseInt(num1) + parseInt(num2);
+    const sum = parseFloat(num1) + parseFloat(num2);
     res.json({ result: sum });
 });
 
 app.get('/mult/:num1/:num2', (req, res) => {
     const { num1, num2 } = req.params;
-    const product = parseInt(num1) * parseInt(num2);
+    const product = parseInt(num1) * parseFloat(num2);
     res.json({ result: product });
 });
 
