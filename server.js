@@ -92,6 +92,19 @@ app.delete('/tacos/:id', (req, res) => {
     res.json({ message: "Order deleted successfully" });
 });
 
+app.post('/suma', (req, res) => {
+    const { num1, num2 } = req.body;
+    const sum = num1 + num2;
+    res.json({ result: sum });
+});
+
+app.post('/mult', (req, res) => {
+    const { num1, num2 } = req.body;
+    const product = num1 * num2;
+    res.json({ result: product });
+});
+
+
 app.listen(port, () => {
     console.log(`Server listening on port ${port}`);
 });
